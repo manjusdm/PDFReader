@@ -1,0 +1,8 @@
+<resources>
+
+    <string name="app_name">PDFReader</string>
+    <string name="btnText_begin">Beginner</string>
+    <string name="btnText_inter">Intermediate</string>
+    <string name="btnText_advance">Advanced</string>
+
+</resources>
