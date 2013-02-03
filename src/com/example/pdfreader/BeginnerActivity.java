@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,21 +35,13 @@ public class BeginnerActivity extends Activity {
 			public void onItemClick(AdapterView<?> arg0, View arg1,
 					int position, long arg3) {
 				// TODO Auto-generated method stub
-
-				Uri path = Uri
-						.parse("android.resource://com.example.pdfreader/raw/chap"
-								+ (position + 1) + ".pdf");
-				// File file = new File(path);
+				String path = Environment.getExternalStorageDirectory()
+						+ "/chap1.pdf";
 				try {
 					Intent intent = new Intent(BeginnerActivity.this,
 							CommonPDFActivity.class);
 					intent.putExtra(PdfViewerActivity.EXTRA_PDFFILENAME,
-					/*
-					 * "file:///android_asset/chap" + (position + 1) + ".pdf"
-					 */path.toString()
-					/*
-					 * "android.resource://com.example.pdfreader/" + R.raw.chap1
-					 */);
+							path.toString());
 					startActivity(intent);
 				} catch (Exception e) {
 					e.printStackTrace();
