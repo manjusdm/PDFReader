@@ -34,13 +34,19 @@ public class PDFReaderActivity extends Activity implements OnClickListener {
 		switch (v.getId()) {
 		case R.id.btnBegin:
 			System.out.println("HI");
-			Intent intent = new Intent(this, BeginnerActivity.class);
-			intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-			startActivity(intent);
+			Intent begin = new Intent(this, BeginnerActivity.class);
+			begin.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+			startActivity(begin);
 			break;
 		case R.id.btnInter:
+			Intent inter = new Intent(this, IntermediateActivity.class);
+			inter.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+			startActivity(inter);
 			break;
 		case R.id.btnAdvance:
+			Intent adv = new Intent(this, AdvancedActivity.class);
+			adv.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+			startActivity(adv);
 			break;
 		}
 	}
