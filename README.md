@@ -1,4 +1,4 @@
 PDFReader
 =========
 
-A Android sample app for reading pdf files.
+A sample app for reading pdf files in Android.
